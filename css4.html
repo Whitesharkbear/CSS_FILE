@@ -1,13 +1,49 @@
+<!-- 
+	
+	table-layout : auto, fixed
+	border-collapse : seperate, collapse
+
+ -->
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
 <style type="text/css">
-	@import url("test.css1")
+
+	table,td {border: 2px solid;} 
+	
+	.table1{
+		width: 500px;
+		table-layout: fixed;
+		border-collapse: collapse;
+	}
+	
+	.table2{
+		table-layout: auto;
+		border-collapse: collapse;
+		border-color: #f2ff9d;
+		border-left-width: 10px;
+		border-right-width: 15px;
+		border-bottom-right-radius: 50px;
+		border-spacing: 7px;  
+	}
+
 </style>
 </head>
 <body>
-	<p>공부는 평생해야 하는 시대가 왔다.</p>
+
+	<table class="table1">
+		<tr><td>1행1열</td><td>1행2열</td><td>1행3열</td></tr>
+		<tr><td>2행1열</td><td>2행2열</td><td>2행3열</td></tr>
+		<tr><td>3행1열</td><td>3행2열</td><td>3행3열</td></tr>
+	</table><br>
+	<table class="table2">
+		<tr><td>1행1열</td><td>1행2열</td><td>1행3열</td></tr>
+		<tr><td>2행1열</td><td>2행2열</td><td>2행3열</td></tr>
+		<tr><td>3행1열</td><td>3행2열</td><td>3행3열</td></tr>
+	</table>
+	
 </body>
 </html>

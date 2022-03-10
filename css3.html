@@ -1,11 +1,25 @@
+<!-- 
+
+		a:link		: 클릭하지않은 링크의 속성설정
+		a:visited	: 방문하지않은 링크의 속성설정
+		a:active	: 링크를 하는 순간의 속성설정
+		a:hover		: 마우스를 링크 위에 올려 놓았을때의 속성설정
+		
+ -->
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
-<link rel="stylesheet" type="text/css" href="test1.css1">
 <title>Insert title here</title>
+<style type="text/css">
+	a:link{text-decoration: none; color: blue; font-family: serif;}
+	a:visited {color: green; text-decoration: none; font-family: 궁서;}
+	a:active {color: gray; text-decoration: underline; font-family: 명조;}
+	a:hover {color: red; text-decoration: underline; font-style: italic;}
+</style>
 </head>
 <body>
-	<p>CSS파일을 외부에 저장해놓고 태그를 활용하여 설정해봅니다.</p>
+
+	<p><A href="http://www.naver.com">네이버</A></p>
 </body>
 </html>

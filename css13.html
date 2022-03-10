@@ -1,0 +1,36 @@
+<!-- 
+
+	웹폰트
+		format			확장자
+		truetype		.ttf
+		opentype		.ttf , otf
+		svg				.svg , . svgz
+		woff			.woff
+
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>웹폰트</title>
+<style type="text/css">
+/*선언*/
+	@font-face{
+		font-family: "NBrush";
+		src: url("font/NanumBrush.ttf") format("truetype");
+	}
+	@font-face{
+		font-family: "NPen";
+		src: url("font/NanumPen.ttf") format("truetype");
+	}
+/*적용*/
+	h1{text-align: center; font: bold 5em "NBrush"}
+	h2{text-align: center; font: bold 2.3em "NPen"; color: skyblue;}
+</style>
+</head>
+<body>
+	<h1>혼자 할 수 있는 일은 많지 않다. 그래서 관계가 중요하다.</h1>
+	<h2>하루가 행복하려면 이발을 해라. 1주일이 행복하려면 차를 사라. 한달을 행복하려면 승마를 배우라.</h2>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+
+	div{
+		margin: 10px;
+		padding: 10px;
+		border: 10px solid blue;
+		width: 500px;
+	}
+	
+	div:last-child{
+		box-sizing: content-box;
+		background-color: orange;
+	}
+	
+	div:first-child {
+		box-sizing: content-box;
+		background-color: red;
+	}
+	
+</style>
+</head>
+<body>
+	
+	<div>
+		<h2>기본적으로 body 안에는 div가 하나 있다고 본다.</h2>
+		<p>그래서 style에서 div를 설정하면 body에 div가 하나도 없어도<br>
+		기본적으로 하나가 생성되어 있음을 볼 수 있다.
+		</p>
+	</div>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+</html>

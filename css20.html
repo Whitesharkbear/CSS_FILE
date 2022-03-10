@@ -1,0 +1,42 @@
+<!-- 
+	
+	.background-image
+	.background-repeat
+	.background-attachment
+	.background-position
+	.background-size
+	
+	1) 개별지정
+	2) 일괄지정
+
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+	
+	/*일괄지정*/
+	div#일괄지정{
+		width: 100%; height: 500px;
+		background: url("image/cherry.png") no repeat 600px 50px;
+		background: url("image/grape.png") repeat-x 0px 200px;
+				
+	}
+	/*개별지정*/
+	div#개별지정{
+	 width: 100%; height: 400px;
+	 background-image: url("image/mango.png"), url("image/pine.png");
+	 background-repeat: repeat-x, repeat-y;
+	 background-position: 600px 100px, 600px 200px;
+	 background-size: 5%, 5%;  
+	}
+
+</style>
+</head>
+<body>
+	<div id="일괄지정">일괄지정</div>
+	<div id="개별지정">개별지정</div>
+</body>
+</html>

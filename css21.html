@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>배경표시의 범위</title>
+<style type="text/css">
+
+	div{
+		margin: 10px;
+		padding: 20px;
+		border: 15px solid rgba(0,128,128,0.5);
+		width: 350px;
+		height: 50px;
+		background-image: url("image/line.png");
+		 
+	}
+	code{
+		font-family: sans-serif;
+		font-weight: bold;
+		font-size: 18px;
+	}
+	#sample1{
+		background-clip: border-box;
+	}
+	#sample2{
+		background-clip: padding-box;
+	}
+	#sample3{
+		background-clip: content-box;
+	}
+
+</style>
+</head>
+<body>
+	<div id="sample1"><code>border-box</code></div>
+	<div id="sample2"><code>padding-box</code></div>
+	<div id="sample3"><code>content-box</code></div>
+	
+</body>
+</html>

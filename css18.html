@@ -1,0 +1,37 @@
+<!-- 
+	. background-image : 이미지 붙이기
+	. background-repeat : 이미지 반복붙이기
+		- repeat(기본)
+		- repeat-x, repeat-y, no-repeat
+	. background-attachment: 화면에서 고정 또는 스크롤 설정
+		- fixed : 삽입한 그림이 현재 위치에 고정
+		- scroll : 삽입한 그림이 스크롤에 따라 함께 움직임
+	. background-position : x위치 y위치
+		- top, center, bottom, left, right
+		- fixed로 설정되어 있을때만 0%~100% 상하좌우 적용된다.
+
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+
+	body{
+		background-color: #f3ff48;
+		background-image: url("image/mango.png");
+		background-repeat: repeat-x;
+		background-attachment: fixed;
+		background-position: 0% 100%;
+	}
+	
+</style>
+</head>
+<body style="font-size: 30px; font-weight: 700">
+
+	<p align="center">배경이미지 관련 속성</p>
+	
+</body>
+</html>

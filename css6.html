@@ -1,0 +1,58 @@
+<!-- 
+
+	선형그라데이션
+		.linear-gradient(방향, 색상, 색상...)
+			  
+					to top
+					 (0도)
+					   |
+					   |
+					   |
+			to left--------to right
+			(360도)	   |    (90도)
+					   |
+					   |	   
+					to bottom  
+					 (180도)
+					 
+		시작-----------중간-----------종료
+		red 0%		  orange 10%   yellow 40%
+  
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+
+	div{
+		margin: 10px;
+		width: 250px;
+		height: 120px;
+		color: #ffff00;
+		font-family: Helvetica, sans-serif;
+		font-weight: bold;
+		box-shadow: 2px 2px 5px black;
+	}
+	#s1{background: linear-gradient(teal,navy,red,yellow)}
+	#s2{background: linear-gradient(to bottom right, teal, navy)}
+	#s3{background: linear-gradient(315deg, teal, navy)}
+	#s4{background: linear-gradient(189deg, teal, navy)}
+	#s5{background: linear-gradient(to bottom left, teal, navy)}
+
+</style>
+</head>
+<body>
+
+	<div id="s1">sample1</div>
+	<div id="s2">sample2</div>
+	<div id="s3">sample3</div>
+	<div id="s4">sample4</div>
+	<div id="s5">sample5</div>
+	
+</body>
+</html>
+
+
