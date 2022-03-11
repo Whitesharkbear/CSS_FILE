@@ -4,44 +4,39 @@
 <meta charset="EUC-KR">
 <title>Insert title here</title>
 <style type="text/css">
+
 	*{margin: 0; padding: 0;}
+	body {width: 100%; height: 700px; margin: 0; padding: 0; 
+		font: bolder 20px "돋음"; color: white; border: 1px solid black;}
+	span{font-size: 15px; color: orange;}
+	header{width: 99%; height: 70px; margin: 4px; padding: 0; background: gray; text-align: center;}
+	.container{
+		width: 99%; height: 565px; margin: 4px; padding: 0; border: 1px solid black;
+		background: gray; text-align: center;
+		position: relative; /*절대위치를 주기 위해서 여기에 상대위치를 지정해 놓은 것*/}
+	.sidemenu{
+		width: 25%; height: 520px; margin: 10px; position: absolute; border: 1px solid black;
+		background-color: #dbd326;}
+	.content{
+		width: 70%; height: 520px; margin: 10px; position: relative; left: 28.5%; border: 1px solid black;
+		background: #dbd326;}
+	.footer{
+		width: 99%; height: 520px; margin: 4px; padding: 0; border: 1px solid black;}
 	
-	body{color: #333}
-	h1,p{padding: 15px;}
-	.gmother{
-		font: 12px Arial, Gulim;
-		background-color: beige;
-		text-align: justify;
-		width: 900px;
-		box-shadow: 2px 2px 3px orange; 
-		
-		column-count: 4;
-		column-gap: 2em;
-		column-rule: 2px dotted brown;
-	}
 
 </style>
 </head>
 <body>
-	<h1>할머니 이야기</h1>
-	<p class="gmother">
-	  우리 동네에는 말이죠. 두 눈이 멀어버린 할머니가 한 분 살고 계세요. 아니, 정확하게 말하자면 그 할머니가
-      우리 동네에 사는 건 확실하지 않지만 우리 동네의 어느 집에 사는지는 잘 몰라요. 한 번도 그 할머니의 집을 가
-      본 적이 없으니까요. 그리고 아무도 그 할머니의 집을 궁금해 하지 않았으니까요.<br>
-      우리는 그 할머니를 '옛날이야기 할머니'라고 불렀어요. 왜냐하면, 매주 일요일 오후만 되면 어김없이 지팡이
-      를 집고 마을 어귀에 있는 옛날 우물터 곁 나무의자에 앉아서 우리들에게 이야기를 들려주곤 했거든요. 솔직히
-      말해서 그 애기들이 한결같이 재미있기만 한 건 아니었어요. 옛날애기 할머니의 애기는 처음에 재미있게 시작
-      했던 애기도 점점 이야기가 진행되면서 할머니의 장환한 잔소리로 이어지는 경우가 많았거든요. 우리들중 그 
-      넋두리를 이해하는 애들은 별로 많지 않았을 거예요. 예를 들면 이런 식이었지요.<br>
-      '......아무리 생각해봐도 그 작고 약한 부족의 어린애들과 여자들을 그렇게 무참히 학살하는 건 아니 될 말이
-      었어. 그 벌을 받아서 그 영화롭던 왕국은 멸망하고 그 토록 아름답던 왕궁의 터전은 잿더미로 화해 버린 거야.
-      모두 부처님의 뜻이지. 신은 사라졌다고, 혹은 존재하지 않는다고 말들 하지만, 난 그렇게 생각하지 않아. 단
-      지 인간의 우매함을 조용히 지켜보고 있을 뿐이야......아, 나로서는 가슴아픈 일이다'<br>
-      이런 식으로 이어지는 애기들을 누가 귀담아듣겠어요? 이런 식으로 혼자 중얼거리는 할머니의 모습은 숫제 보이지
-      않는 어른을 상대로 열심히 이야기하는 것처럼 보여서 우리들의 기분이 종종 언짢아질 때가 있었어요. 하지만
-      할머니의 애기 중에는 그래도 꽤 재미있는 애기들도 간혼 있었기 때문에 우리는 일요일 오후만 되면 적을 무찌르고
-      영토를 넓혔던 위대한 대왕 이야기, 용맹한 장군들의 무용담이나 장군을 사랑하는 예쁜 공주이야기 등은 귀담아
-      들을 만했지요.
-    </p>
+
+	<header><h3>header</h3></header>
+	
+	<div class="container">
+		<h3>container<span>position:relative, width:100%</span></h3>
+		<nav class="sidemenu">sidemenu<span>position:absolute</span></nav>
+		<section class="content">content<br><span>position:relative, left:왼쪽박스 폭</span></section>
+	</div>
+	
+	<footer class="footer"><h3>footer</h3></footer>
+	
 </body>
 </html>

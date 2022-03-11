@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,35 +6,52 @@
 <title>Insert title here</title>
 <style type="text/css">
 
-	.none{list-style-type: none;}
-	.ul1{list-style-type: disc;}
-	.ul2{list-style-type: circle;}
-	.ul3{list-style-type: square;}
+	*{margin: 0; padding: 0;}
+	li{list-style-type: none;}
+	body{
+		font-size: 12px; font-family: "굴림",gulim;
+		color: #333;
+	}
+	h1{
+		font: bold 42px "굴림", Gulim; background-color: #ccc;
+		padding: 10px 100px; letter-spacing: 3px; 
+	}
+	.intro{padding: 10px; font-size: 120%;}
+	.gallery li{float: left; width: 160%; text-align: center;}
+	h2{
+		font: bold 40px "굴림", Gulim; width: 120px; height: 100px;
+		margin-left: 20px; padding-top: 10px; color: #fff;
+	}
+	.tulip h2{background-color: #c00;}
+	.jebi h2{background-color: #248;}
+	.hobak h2{background-color: #f90;}
+	.sunflower h2{background-color: #880;}
 	
-	.ol1{list-style-type: decimal;}
-	.ol2{list-style-type: lower-roman;}
-	.ol3{list-style-type: upper-roman;}
-	.ol4{list-style-type: lower-alpha;}
-	.ol5{list-style-type: upper-alpha;}
-	
+	.gallery li p{
+		padding: 10px; text-align: justify;
+	}
+
 </style>
 </head>
 <body>
-
-	<h3>순서없는 목록표시</h3>
-	<ul>
-		<li class="none"><a href="">목록 표시마크없음</a></li>
-		<li class="ul1">디스크</li>
-		<li class="ul2">웹</li>
-		<li class="ul3">사각형</li>
-	</ul>
-	<ol>
-		<li class="ol1">10진수</li>
-		<li class="ol2">소문자 로마숫자</li>
-		<li class="ol3">대문자 로마숫자</li>
-		<li class="ol4">소문자 알파벳</li>
-		<li class="ol5">대문자 알파벳</li>
-	</ol>
-	
+	<h1>나의 아름다운 정원</h1>
+	<div id="container">
+		<p class="intro">사람들이 선호하는 꽃들은 어떤 것들일까.. 아마 스스로에게
+		<strong>자신감을 북돋워 주는</strong>표정있는 꽃들일 것이다.</p>
+		<ul class="gallery">
+			<li class="tulip"><h2>튜울립</h2>
+			<p>너무 화려하지 않으며 고귀한 느낌을 가지고 있다. 붉은색이면 단연 
+			으뜸이며, 한 송이만 있어도 빼어나다.</p></li>
+			<li class="jebi"><h2>제비꽃</h2>
+			<p>드물게 푸른색을 띠고 있으며 작지만 시원해 보이는 어린꽃이라고
+			할 수 있다. 여럿이 함께 있을때 더욱 아름답다.</p></li>
+			<li class="hobak"><h2>호박꽃</h2>
+			<p>색도 모양도 화려하며 이름과 걸맞지 않게 아름다운 꽃으로 매우
+			완숙한 이미지를 주는 꽃이다.</p></li>
+			<li class="sunflower"><h2>해바라기</h2>
+			<p>태양만 바라보는 일편다심의 꽃으로 얼굴이 큰 편에 속하며 송이가
+			적어야 제격이다.</p></li>
+		</ul>
+	</div>
 </body>
 </html>

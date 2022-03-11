@@ -1,25 +1,54 @@
-<!-- 
-
-		a:link		: 클릭하지않은 링크의 속성설정
-		a:visited	: 방문하지않은 링크의 속성설정
-		a:active	: 링크를 하는 순간의 속성설정
-		a:hover		: 마우스를 링크 위에 올려 놓았을때의 속성설정
-		
- -->
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
 <style type="text/css">
-	a:link{text-decoration: none; color: blue; font-family: serif;}
-	a:visited {color: green; text-decoration: none; font-family: 궁서;}
-	a:active {color: gray; text-decoration: underline; font-family: 명조;}
-	a:hover {color: red; text-decoration: underline; font-style: italic;}
+
+	*{margin: 0; padding: 0;}
+	li{list-style-type: none;}
+	body{
+		font-family: helvetica, sans-sefif;
+		font: 12px/1.5; margin: 10px;
+	}
+	/* 부모 */
+	#container{
+		width: 560px; border: 1px solid blue; background: yellow;
+		height: 165px;
+	}
+	.menu{
+		float: left; width: 130px; padding: 10px;
+	}
+	.content{
+		float: right; width: 350px; padding: 10px; border-left: 1px solid #ccc;  
+	}
+	#footer{
+		clear: both;
+	}
+	address{font-size:smaller; padding: 10px;}
+	
 </style>
 </head>
 <body>
 
-	<p><A href="http://www.naver.com">네이버</A></p>
+	<div id="container">
+		<div class="menu">
+			<li><a href="#">회사소개</a></li>
+			<li><a href="#">제품안내</a></li>
+			<li><a href="#">커뮤니티</a></li>
+		</div>	
+		<div class="content">
+			<p>
+				이 제품은 어댑터와 본체가 분리되어 있는 대부분의 제품들이 갖는 불편함을
+				해소하는 데 큰 기여를 하고 있다. 가장 많은 불편함은 어댑터분실인데 이
+				제품은 usb크기의 잭만 꽂으면 센서로 자동충전되어 충전도 휴대도 간편한
+				복덩어리 노트북으로 불리고 있다. 이런 노트북은 이미 시중에 판매되고 있다.
+			</p>
+		</div>
+		<div class="footer">
+			<address>&Copy; 2022 Copyright All right reserved</address>
+		</div>
+	</div>
+
 </body>
 </html>

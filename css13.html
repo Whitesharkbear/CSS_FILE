@@ -1,36 +1,40 @@
-<!-- 
-
-	웹폰트
-		format			확장자
-		truetype		.ttf
-		opentype		.ttf , otf
-		svg				.svg , . svgz
-		woff			.woff
-
- -->
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>웹폰트</title>
+<title>Insert title here</title>
 <style type="text/css">
-/*선언*/
-	@font-face{
-		font-family: "NBrush";
-		src: url("font/NanumBrush.ttf") format("truetype");
+
+	*{margin: 0; padding: 0;}
+	li{list-style-type: none;}
+	body{
+		margin: 20px; font: 12px "굴림",Gulim;
 	}
-	@font-face{
-		font-family: "NPen";
-		src: url("font/NanumPen.ttf") format("truetype");
+	#gnb>li{display: inline;}
+	#gnb>li a{
+		display: inline-block;
+		width: 100px;
+		height: 23px;
+		padding-top: 10px;
+		text-align: center;
+		background-color: #c00;
+		color: #fff;
 	}
-/*적용*/
-	h1{text-align: center; font: bold 5em "NBrush"}
-	h2{text-align: center; font: bold 2.3em "NPen"; color: skyblue;}
+	#gnb>li a:hover{
+		background-color: #369;
+	}
+
 </style>
 </head>
 <body>
-	<h1>혼자 할 수 있는 일은 많지 않다. 그래서 관계가 중요하다.</h1>
-	<h2>하루가 행복하려면 이발을 해라. 1주일이 행복하려면 차를 사라. 한달을 행복하려면 승마를 배우라.</h2>
-
+	<div>
+		<h1>주메뉴</h1>
+		<ul>
+			<li><A href="">COMPANY</A></li>
+			<li><A href="">PRODUCT</A></li>
+			<li><A href="">SERVICE</A></li>
+			<li><A href="">COMMINITY</A></li>
+		</ul>
+	</div>
 </body>
 </html>

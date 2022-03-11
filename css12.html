@@ -5,23 +5,40 @@
 <title>Insert title here</title>
 <style type="text/css">
 
-	*{margin:0; padding: 0;}
-	body{ font: 12px "굴림", gulim; margin: 20px;}
-	div{ width: 11em; padding: 10px; background-color: #1ce4e6;}
-	.wrap{ word-wrap: break-word; }
+	span{
+		display: block;
+		width: 200px; 
+		height: 60px; 
+		background-color: rgba(50,150,150,0.5);
+		text-align: center;
+	}
 	
+	div div{
+		background: blue;
+		color: white;
+		display: inline-block;
+		width: 100px;
+		height: 100px;
+	}
+
+
 </style>
 </head>
 <body>
 	<div>
-		이 문장은 매우 긴 단어를 포함하고 있습니다.
-		asdfzxdcvqerasdsfadfsafqwerqwrqewrqreqwrqwrqwrqwrwqrqwrw
-		영문을 띄어쓰기 없이 길게 입력하면 width값을 주어도 박스 밖으로 벗어나게 됩니다.
+		<span>Block화된 Span</span>과
+		<span>Block화된 Span</span>입니다.
 	</div>
-	<div class="wrap">
-		이 문장은 매우 긴 단어를 포함하고 있습니다.
-		asdfzxdcvqerasdsfadfsafqwerqwrqewrqreqwrqwrqwrqwrwqrqwrw
-		영문을 띄어쓰기 없이 길게 입력하면 width값을 주어도 박스 밖으로 벗어나게 됩니다.
+	
+	<div style="background-color: orange;">
+	
+		<div>inline DIV</div>
+		<div>inline DIV</div>
+		<div>inline DIV</div>
+		<div>inline DIV</div>
+		<div>inline DIV</div>
+	
 	</div>
+
 </body>
 </html>

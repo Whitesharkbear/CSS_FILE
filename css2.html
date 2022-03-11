@@ -5,56 +5,45 @@
 <title>Insert title here</title>
 <style type="text/css">
 
-	.list1{
-		list-style-image: url("image/");
-		list-style-position: inside;
-	}
-	.list2{
-		list-style-image: url("image/");
-		list-style-position: outside;
-	}
+	*{margin: 0; padding: 0;}
+	body{font: 12px "굴림", Gulim; margin: 20px; background-color: yellow; border: 1px solid black;}
+	li{list-style-type: none;}
 	
+	#wrap{width: 550px;}
+
+	.skate{float: left; width: 250px; padding: 15px; background: #eee;}
+	.football{float: right; width: 210px; padding: 15px; background: #ccc;}
+	.olympic{clear: both; padding: 10px; background: #8cc;}
+	
+	/* clear는 left, right, both 정확하게 지정해야한다. 둘다 해제해라고 하면.. 
+	어느 것을 해야할지 오류가 발생될 수 있다.*/
+
 </style>
 </head>
 <body>
 
-	<ul>
-		<li><A href="#첫번째">기본: disc</A></li>
-		<li><A href="#두번째">기본: outside</A></li>
-	</ul>
-	<ul class="list1">
-		<li>list-style-image로 지정</li>
-		<li>list-style-position을 inside로 지정</li>
-	</ul>
-	<ul class="list2">
-		<li>list-style-image로 지정</li>
-		<li>list-style-position을 outside로 지정</li>
-	</ul>
-	
-	<br><br><br><br><br><br><br><br><br><br><br><br>
-	<br><br><br><br><br><br><br><br><br><br><br><br>
-	
-	<div>
-		<h2><A name="첫번째">Lorem Ipsum is simply dummy <br>
-		text of the printing and typesetting industry. </A></h2>
-		Lorem Ipsum has been the industry's <br>
-		standard dummy text ever since  <br>
-		the 1500s, when an unknown printer took a  <br>
-		galley of type and scrambled it to make a  <br>
-		type specimen book.
-	</div>
-	
-		<br><br><br><br><br><br><br><br><br><br><br><br>
-	<br><br><br><br><br><br><br><br><br><br><br><br>
-	
-	<div>
-		<h2><A name="두번째">Lorem Ipsum is simply dummy <br>
-		text of the printing and typesetting industry. </A></h2>
-		Lorem Ipsum has been the industry's <br>
-		standard dummy text ever since  <br>
-		the 1500s, when an unknown printer took a  <br>
-		galley of type and scrambled it to make a  <br>
-		type specimen book.
+	<div id="wrap">
+		<div class="skate">
+			<p>우리의 자랑 스포츠의 꽃 김은호 선수의 요즘 행보에 대해 일부의 사람들이 불만을
+			토로하고 있다. 그녀의 주류광고가 문제가 된 것인데 그렇다면 김은호는 미성년자도
+			아닌데 왜 주류광고에 나오면 안 되고 다른 스타들은 되는... 이런 우스운 경우가 있
+			을까? 다른 스타들도 김은호처럼 소중한 우리의 스타고 김은호도 다른 사람들처럼
+			인형이 아닌 성인의 한사람인데 말이다.</p>
+		</div>
+		<div class="football">
+			<p>스포츠스타 박지수는 스타라는 말이 좀 퇴폐적으로 여겨지던 시절 그 말을 완전히 깨
+			끗히 세척해서 원래 뜻 그대로 만들어 놓은 사람이다. 사람이 어쩌면 저렇게 참될 수 있
+			을가라고 생각하게 한 장본인. 그의 과거와 현재의 행동거지를 보면 노력과 지정의 결
+			정체라고 감탄해 마지않던 행복한 기억을 되살린다. 어떤 약보다도 강하고 부작용없는 정
+			신강장제가 되어준 진정한 스타인 그를 존경하지 않을 사람이 있을까...</p>
+		</div>
+		<div class="olympic">
+			<p>우리의 자랑 스포츠의 꽃 김은호 선수의 요즘 행보에 대해 일부의 사람들이 불만을
+			토로하고 있다. 그녀의 주류광고가 문제가 된 것인데 그렇다면 김은호는 미성년자도
+			아닌데 왜 주류광고에 나오면 안 되고 다른 스타들은 되는... 이런 우스운 경우가 있
+			을까? 다른 스타들도 김은호처럼 소중한 우리의 스타고 김은호도 다른 사람들처럼
+			인형이 아닌 성인의 한사람인데 말이다.</p>
+		</div>
 	</div>
 	
 </body>

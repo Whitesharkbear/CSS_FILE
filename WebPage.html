@@ -1,0 +1,85 @@
+<!-- 
+
+	1) static 배치 	- 기본
+				  	- html에 구성하는 순서에 따른다.
+				  	- z-index가 적요되지 않는다.
+	2) absolute 배치 	- 부모의 위치를 기준으로 left, top값으로 지정한다.
+					- 콘텐츠가 증가하는 경우 레이아웃이 망가질 수 있다.
+					- 기본위치가 body, 그러므로 부모를 relative 레이아웃으로 지정해놓는다.
+					- float:left와 함께 사용할 수는 있으나, 변화가 생길 때 레이아웃이 문제가 될 수 있으므로 함께 사용을 피한다.
+	3) relative 배치 	- float배치에서는 박스의 바깥쪽에 배치할 수가 없는 반면에 
+					- 상대배치를 적용하면 박스의 바깥쪽에 배치할 수 있다.
+	4) fixed 배치		- 항상 콘텐츠를 브라우저의 특정위치에 고정시킬 수 있다.
+
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+
+/* 	step 1: 내용구성과 블럭영역의 구현 - 배경색지정*/
+	*{box-sizing: border-box;}
+	#header{background: dimgray; color: white;}
+	#menu{background: #333; color: white;}
+	#content{background: ghostwhite;}
+	#side{background: #f0f0f0;}
+	#footer{background: darkgray;}
+	
+/*	step 2: 배치(position)를 설정해서 구도를 잡는다*/
+	#menu{float: left; width: 20%;}
+	#content{float: left; width: 60%;}
+	#side{float: left; width: 20%;}
+	
+/*	step 3: 내비게이션을 구현한다*/
+	#menu a{display: block; color: white;}
+	
+/*	step 4: float으로 설정된 후속영역의 배치를 설정한다*/
+	#footer{clear: both;}
+	
+/*	step 5: 구성블럭에 대한 영역크기를 지정한다*/
+	#container{height: 600px;}
+	#header{height: 15%}
+	#menu, #content, #side{height: 75%;}
+	#footer{height: 10%;}
+	
+/*	step 6: 내비게이션과 콘텐츠창을 연결한다*/
+	#f1{
+		margin: 0 0; padding: 0 0;
+		border: 0; 
+	}
+	#header, #menu, #footer{text-align: center;}
+
+/*	step 7: 효과등을 설정한다*/
+	#menu{
+		z-index: 0; background: black; overflow: hidden; 
+	}
+	#menu a{
+		color: white; padding: 16px; text-decoration: none;
+	}
+	#menu a:hover {
+		background: lightgray; color: black;
+	}
+
+</style>
+</head>
+<body>
+	<div id="container">
+		<div id="header">우리집 CAFE</div>
+		<div id="menu">Menu
+			<a href="#">아메리카노</a>
+			<a href="#">카푸치노</a>
+			<a href="#">카페라떼</a>
+			<a href="#">바닐라라떼</a>
+			<a href="#">아포카토</a>
+		</div>
+		<div id="content">
+			<iframe src="sample.html" id="f1" width="100%" height="100%"></iframe>
+		</div>
+		<div id="side">Side</div>
+		<div id="footer">Footer</div>
+	</div>
+</body>
+</html>

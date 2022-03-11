@@ -2,34 +2,42 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Insert title here</title>
+<title>고정형</title>
 <style type="text/css">
 
-	.t{ border-width: 2px;
-		border-style: solid;
-		border-color: orange;
-		border-collapse: collapse;
-		border-spacing: 2px;
-		width: 400px;
-		height: 300px;
-		margin: 5px;
+	html,body{
+		width: 1536px; height: 754px; margin: 0; padding: 0; background-color: #f0f0f0;
 	}
-	img{
-		box-shadow: 2px 2px 5px black;
+	#nave{
+		width: 236px; height: 754px; margin: 0; padding: 0; border-width: 0; float: left; 
+		background-color: orange;
+	}	
+	#content{
+		width: 1300px; height: 754px; margin: 0; padding: 0; border-width: 0; float: left;
+		background-color: skyblue; 
 	}
-	img:hover {
-		width: 95px; height: 95px;
-	}
-
+	
 </style>
 </head>
 <body>
-	<table class="t">
-		<Tr>
-		<Td><a href="https://www.naver.com"><img src="image/cherry.png" width="100px" height="100px"></a><td>
-		<Td><a href="https://www.google.com"><img src="image/grape.png" width="100px" height="100px"></a></Td>
-		<td><a href="https://www.daum.net"><img src="image/pine.png" width="100px" height="100px"></a></Td>
-		</tr>
-	</table>
+
+	<section id="container">
+		<nav id="nave">
+			<h3>네비게이션</h3>
+		</nav>
+		<article id="content">
+			<h3>고정형입니다.</h3>
+			<p>
+				- 컨텐츠의 특정 가로폭을 고정한 레이아웃입니다.<br>
+				- 가로폭은 px단위로 설계합니다.<br>
+				- 대부분의 웹사이트에서 사용합니다.<br>
+				- 가장 간편하다고 할 수 있습니다.<br>
+				
+				- 대형화된 디스플레이에서는 가로폭이 좁고 답답하게 느껴질 수 있다.<br>
+				- 다양한 디스플레이에 대응하기에는 부족한 점도 있다.
+			</p>
+		</article>
+	</section>
+
 </body>
 </html>

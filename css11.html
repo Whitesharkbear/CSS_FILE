@@ -1,25 +1,64 @@
+<!-- 
+
+	display속성
+		요소의 표시특성을 변경시킬 수 있다.
+		정보구조에 맞게 요소를 지정하지만, 출력시에는 필요한 속성으로 변경시켜 디자인할 수 있다.
+		
+		. block
+			- 박스의 유형을 블럭박스로 보여준다.
+			- 항상 새로운 라인에서 시작한다.
+			- 옆에 다른 요소가 붙을 수가 없다.
+			- width와 height을 지정할 수 있다.
+			- text-align도 할 수 있다.
+		. inline
+			- 박스의 유형을 인라인으로 보여준다.
+			- 모든 박스안에 배치되어진다.
+			- 옆에 다른 요소가 붙을 수 있다.
+			- width와 height을 지정할 수 없다.
+		. inline-block
+			- 새라인에서 시작하지 못함.
+			- 박스 안에 배치.
+			- 옆에 다른요소 배치가능.
+			- width와 height을 지정할 수 있다.
+			- text-align도 할 수 있다.
+		. list-item
+			- block과 같으면서 list-style을 설정할 수 있다.
+		. table-cell
+			- 표의 셀과 마찬가지로 일렬로 가로 정렬된다.
+			- 요소의 높이도 자동적으로 가장 큰 것에 맞춰진다.
+			- Vertical-align도 된다.
+		. none : 비표시
+
+ -->
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
 <style type="text/css">
-	*{margin: 0; padding: 0;}
-	body{font: 12px Arial, Gulim; margin: 20px;}
-	
-	h1{
-		font-size: 50px; color: #275;
-		text-shadow: 5px 10px 10px #55e;	
+
+	div{
+		border : 1px solid green;
+		background: lightgray;
 	}
-	h2{
-		font-size: 20px;
-		text-shadow: 10px 15px 10px;
+	span{
+		background: pink;
 	}
-	
+
 </style>
 </head>
 <body>
-	<h1>상상이 현실이 되기위해서는 반드시 번데기 시절이 필요하다.</h1>
-	<h2>let's do it together!!</h2>
+	<h3>DVI Block 박스</h3>
+	<hr>
+	<div>DIV 블록박스는 새로운 라인에서 시작해서 라인끝까지 차지하고, 옆에 다른 태그가 붙지않는다.</div>
+	<div>DIV</div>
+	<div>DIV</div>
+	
+	<hr>
+	<div>DIV안에 <span>span 인라인 박스는 블록박스 안에 순서적으로 배치된다.</span>과<span>span</span>입니다.</div>
+	<div>DIV안에 <span>span</span>과<span>span</span>입니다.</div>
+	<div>DIV안에 <span>span</span>과<span>span</span>입니다.</div>
+	
 </body>
 </html>

@@ -5,20 +5,55 @@
 <title>Insert title here</title>
 <style type="text/css">
 
-	body p.text1{font-weight: bolder; text-transform: capitalize;}  
-	.t2{font-weight: bolder; text-transform: uppercase;}
-	.t3{font-weight: bolder; text-transform: lowercase;}
-	.t4{font-variant: inherit;}
+	html,body{width: 100%; height: 754px; margin: 0; padding: 0; background-color: #f0f0f0;}
+	
+	#container1{width: 470px; height: 700px; margin: 10px; padding: 0; background: #fffff0; 
+				border: 1px solid black; float: left;}
+	.head1{width: 370px; height: 12%; margin: 15px auto; padding: 15px; background: #ffdead;}
+	.article1{width: 370px; height: 35%; margin: 15px auto; padding: 15px; background: #87cefa;}
+	.aside1{width: 370px; height: 15%; margin: 15px auto; padding: 15px; background: #8fbc8f;}
+	.footer1{width: 370px; height: 10%; margin: 15px auto; padding: 15px; background: #ffe4e1;}
+
+	#container2{width: 500px; height: 700px; margin: 10px; padding: 0; background: #fffff0;
+				border: 1px solid black; float: left;}
+	.head2{width: 470px; height: 12%; margin: 15px; padding: 0; background: #ffdead; float: left;}
+	.nav2{width: 100px; height: 65%; margin: 15px; padding: 0; background: #87cefa; float: left;}
+	.article2{width: 340px; height: 65%; margin: 15px; padding: 0; background: #8fbc8f; float: left;}
+	.footer2{width: 470px; height: 12%; margin: 15px; padding: 0; background: #ffe4e1; float: left;}
+
+	#container3{width: 500px; height: 700px; margin: 10px; padding: 0; background: #fffff0;
+				border: 1px solid black; float: left;}
+	.head3{width: 470px; height: 12%; margin: 15px; padding: 0; background: #ffdead; float: left;}
+	.nav3{width: 100px; height: 65%; margin: 15px; padding: 0; background: #87cefa; float: left;}
+	.article3{width: 200px; height: 65%; margin: 15px; padding: 0; background: #8fbc8f; float: left;}
+	.nav4{width: 100px; height: 65%; margin: 15px; padding: 0; background: orange; float: right;}
+	.footer3{width: 470px; height: 12%; margin: 15px; padding: 0; background: #ffe4e1; float: left;}
 	
 </style>
 </head>
 <body>
 
-	<p class="t1">life is venture or nothing</p>
-	<p class="t2">a rolling stone gathers no moss</p>
-	<p class="t3">PUT OFF FOR ONE DAY TEN DAYS WILL PASS</p>
-	<p style="font-variant: small-caps;"><font class="t4">a rolling stone gathers no moss</font></p>
-	<!-- small-caps : 작은 대문자  --> 
+	<div id="container1" bgcolor="#bebebe">
+		<div class="head1"><h3 align="center">1단 레이아웃</h3></div>
+		<div class="article1"></div>
+		<div class="aside1"></div>
+		<div class="footer1"></div>
+	</div>
 	
+	<div id="container2" bgcolor="#bebebe">
+		<div class="head2"><h3 align="center">2단 레이아웃</h3></div>
+		<div class="nav2"></div>
+		<div class="article2"><img src="image/jjajang.png" width="100%" height="100%"></div>
+		<div class="footer2"></div>
+	</div>
+	
+	<div id="container3" bgcolor="#bebebe">
+		<div class="head3"><h3 align="center">2단 레이아웃</h3></div>
+		<div class="nav3"></div>
+		<div class="article3"><img src="image/jjajang.png" width="100%" height="100%"></div>
+		<div class="nav4"></div>
+		<div class="footer3"></div>
+	</div>
+
 </body>
 </html>

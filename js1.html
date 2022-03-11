@@ -1,0 +1,39 @@
+<!-- 
+	
+	1. 자바스크립트(JavaScript) - .js
+		. 클라이언트 쪽에서 독립적으로 실행되는 프로그램을 작성하기 위한 스크립트 언어.
+		. HTML과 CSS와 함께 웹페이지를 작성한다.
+		. 대부분 자바의 문법구조이지만, 자바와 동일한 언어는 아니다.
+	
+	2. 특징
+		. HTML문서 안에 그대로 추가해서 작성하는 스크립트언어.
+		. 웹브라우저에 의해서 인터프리터 방식으로 해석하고 실행하는 언어이다.
+		. 객체기반언어이다.
+		. 브라우저로 실행되므로 신속한 개발이 가능.
+		. 서로 다른 플랫폼에서도 제한없이 사용가능.
+		. 변수의 자료형 타입을 선언하지 않아도 자동으로 지정된다.
+		. 보안에 주의, 고급수준으로 프로그램은 난해
+
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function over(obj) {
+		obj.src="image/grape.png";
+	}
+	function out(obj) {
+		obj.src="image/mango.png"		
+	}
+	
+</script>
+</head>
+<body>
+	<h3>마우스를 올려보세요.</h3>
+	<hr>
+	<img alt="" src="image/cherry.png" onmouseover="over(this)" onmouseout="out(this)">
+</body>
+</html>

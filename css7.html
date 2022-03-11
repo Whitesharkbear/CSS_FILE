@@ -1,101 +1,38 @@
-<!-- 
-
-	원형그라데이션
-		. radial-gradient(모양 at 시작점, 색상, 색상...)
-			- 모양: circle, ellipse
-			- 크기: closest-side	: 가까운 변에 내접
-				   farthest-side : 먼 변에 내접
-				   closest-corner : 가까운 모서리에 내접
-				   farthest-corner : 먼 모서리에 내접	
-
- -->
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
 <style type="text/css">
-	#circle1{
-		width: 400px; height: 200px;
-		position: absolute;
-		left: 10px; 
-		top: 10px;
-		color: white;
-		text-align: center;
-		
-		background: radial-gradient(circle 40px at 60px 50px, white, black);
-	}
-	#circle2{
-		width: 400px; height: 200px;
-		position: absolute;
-		left: 450px;
-		top: 10px;
-		color: white;
-		text-align: center;
-		/*가장 가까운 변에 내접*/
-		background: radial-gradient(circle closest-side at center, white, red 55%, black);
-	}
-	#ellipse1{
-		width: 400px; height: 200px;
-		position: absolute;
-		left: 10px;
-		top: 250px;
-		color: white;
-		text-align: center;
-		background: radial-gradient(ellipse 150px 80px at 20% 90%, white, black);
-	}
-	#ellipse2{
-		width: 400px; height: 200px;
-		position: absolute;
-		left: 450px;
-		top: 250px;
-		color: white;
-		text-align: center;
-		background: radial-gradient(ellipse farthest-corner, white, red 55%, yellow 20%, black);
-	}
-	.s1{
-		position: absolute;
-		left: 10px;
-		top: 550px;
-		margin: 10px;
-		width: 250px;
-		height: 120px;
-		color: #fff;
-		font-family: helvetica, sans-serif;
-		font-weight: bold;
-		
-		box-shadow: 2px 2px 10px black;
-		background: repeating-linear-gradient(to right, teal 0%, navy 15%, black 30%);
-	}
-	.s2{
-		position: absolute;
-		left: 450px;
-		top: 550px;
-		margin: 10px;
-		width: 250px;
-		height: 120px;
-		color: #fff;
-		font-family: helvetica, sans-serif;
-		font-weight: bold;
-		
-		box-shadow: 2px 2px 10px black;
-		background: repeating-radial-gradient(circle 40px at 60px 50px, white, yellow, orange, red, black);
-	}
+
+	html,body{width: 100%; height: 754px; margin: 0; padding: 0; background-color: #f0f0f0;}
+	#nav{width: 200px; height: 754px; margin: 0; padding: 0; border-width: 0;
+		background-color: orange; float: left;}
+	#content{width: 86%; height: 754px; margin: 0; padding: 0; border-width: 0;
+		background-color: skyblue; float: left;}
 
 </style>
 </head>
 <body>
-	<div class="container">
-		<div id="circle1">위치와 크기지정 원</div>
-		<div id="circle2">가장 가까운 변에 내접하는 원</div>
-	</div>
-	<div class="container">
-		<div id="ellipse1">위치와 크기지정</div>
-		<div id="ellipse2">가장 먼 모서리에 내접하는 원</div>
-	</div>
-	<div class="s s1">sample1</div>
-	<div class="s s2">sample2</div>
+
+	<section id="container">
+		<nav id="nav">
+			<h3>네비게이션</h3>
+			<ul>
+				<li>레이아웃의 종류</li>
+				<li>레이아웃의 구현방법</li>
+			</ul>
+		</nav>
+		<article id="content">
+			<h3>유동형 FLEXIBLE레이아웃</h3>
+			<p>
+				- 극단적으로 좁거나 극단적으로 넓은 화면의 가동성을 좋게 개량한 레이아웃.<br>
+				- 유연한 레이아웃의 대표적인 레이아웃이다.<br>
+				- 이러한 레이아웃이 증가되고 있다.<br>
+				- %와 px를 혼용하여 설계한다.
+			</p>
+		</article>
+	</section>
 
 </body>
 </html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var a;
+	var a = 10;
+	var a = 30; /* var로 중복선언이 가능하다. 코드를 작성하다가 오류가 발생될 수 있다. 되도록 var로 붙여라*/
+
+	var c = 100;
+	var d = 600;
+	var e = 500;
+	var sum = d + e;
+
+	function f() {
+		var c = 500;
+		m = 1500; //전역변수 - 함수내에서 var로 선언되지 않았으므로 
+
+		document.write(a + "<br>");
+		document.write("지역변수c : " + c + "<br>");
+		document.write("전역변수c : " + this.c + "<br>");
+		document.write("d : " + d + "<br>");
+		document.write("sum : " + sum + "<br>");
+
+		document.write("g : " + g + "<br>");
+		document.write("t : " + t + "<br>");
+		document.write("k : " + k + "<br>");
+	}
+
+	var g = 500;
+	t = 'var로 선언되지 않는 변수';
+	f();
+</script>
+</head>
+<body>
+	<h3>변수선언테스트</h3>
+	<script type="text/javascript">
+		var k = 800;
+		document.write(a + "<br>");
+		document.write(d + "<br>");
+
+		f();
+		document.write("m : " + m);
+	</script>
+</body>
+</html>
