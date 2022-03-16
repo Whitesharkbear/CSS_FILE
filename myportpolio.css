@@ -1,0 +1,65 @@
+@charset "EUC-KR";
+
+*{margin: 0; padding: 0 0;}
+header,body,footer{
+	font-size: 14px; 
+	font-family: 나눔고딕, 굴림, 돋움, 'Times New Roman', serif;
+	width: 100%;
+}
+header,footer{text-align: center;}
+body {
+	margin: auto;
+}
+footer{position: fixed; bottom: 0px;}
+
+/*공통스타일*/
+
+h1{padding: 15px; font-size: 30px; color: white;}
+h2{font-size: 15px; color: white;}
+h3{margin: 10px; font-size: 15px; color: green; text-shadow: 4px 4px 7px green;}
+h1,h2{background-image: url('img/bg.jpg'); background-repeat: repeat-x;}
+img{
+	border: 0; padding: 2px;
+}
+nav{margin: 5px 5px;}
+nav > span > a{
+	font-style: normal;
+	margin: 0px;
+	padding: 3px;
+	border: 2px solid #36BEB0;
+	text-decoration: none;
+	background: #F1C848;
+	color: #0D4459;
+	float: right;
+}
+nav > span > a:hover{ background: #ff00ff; color: white;}
+
+/*미디어쿼리: 가로모드일 경우*/
+@media only screen and (min-width:321px) and (orientation:landscape){
+	section{width: 85%; float: right;}
+	aside{width: 15%; text-align: center; float: right;}
+	footer{clear: both;}
+}
+.content{clear: both;}
+.section1 ul li{
+	list-style-position: inside;
+	list-style-image: url("../img/li.jpg"); 
+}
+#stu-pic{width: 6em; height: 9em; float: left;}
+#year-table{
+	table-layout: auto;
+	width: 80%;
+	border-collapse: separate;
+}
+#year-table thead{
+	background: #E4F2D0;
+}
+#Logo{position: fixed; top: 130px; left: 70px; opacity: 0.3;}
+video{
+	margin: 5px; width: 180px; height: 150px;
+}
+.semi-pic{width: 4em; height: 3em;}
+#pic-container{overflow: hidden;}
+#pic-container:hover{height: 20px;}
+
+	

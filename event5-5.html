@@ -1,0 +1,74 @@
+
+<!-- 
+
+	이벤트(event) 객체
+		; 이벤트에 대한 다양한 정보를 담고 있다
+		; 좌표값, 키코드 등의 정보를 담고 있다
+		
+		- 브라우저가 생성해서 -- 이벤트 리스너에게 전달 --- 실행 - 소멸
+		
+		- 이벤트 객체는 이벤트리스너 함수의 첫번째 매개변수로 전달된다.
+
+ -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트 객체전달1</title>
+
+<script type="text/javascript">
+
+
+</script>
+
+</head>
+<body>
+
+	<h3>이벤트 객체전달</h3>
+	<hr>
+	<img id="img" alt="" src="images/siga.jpg"><br>
+	
+	<!-- 태그안에서 이벤트리스너 생성시: 이벤트 객체는 반드시 event 프로퍼티를 넣어야 한다 -->
+	<button onclick="f(event)">버튼을 클릭해 보세요</button>
+	<p id="p">마우스를 올려보세요</p>
+	
+	<script type="text/javascript">
+	
+	function f(e) {
+		alert(e.type);	/* e.type: 이벤트의 종류 */
+	}
+	
+	// 이름을 가진 이벤트리스너 함수일 경우
+	var p = document.getElementById("p");
+	p.onmouseover = f;
+	
+	
+	// 익명함수일 경우 - e는 생략가능하다
+	var img = document.getElementById("img");
+	img.onmouseout = function(e) {
+		alert(e.type);
+		
+	}
+	
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+	function findChecked() {
+		var found = null;
+		var city = document.getElementsByName('city');
+		for(i=0; i<city.length; i++){
+			if(city[i].checked == true){
+				found=city[i];
+				break;
+			}
+		}
+		if(found != null) {
+			alert(found.value+"이 선택되었습니다.");
+		} else {
+			alert("선택하지 않았습니다.");
+		}
+	}
+
+</script>
+
+</head>
+<body>
+	
+	<h3>버튼을 클릭하면 선택된 라디오 버튼의 값이 출력됩니다.</h3>
+	<hr>
+	<form>
+		<input type="radio" name="city" value="seoul" checked="checked">서울
+		<input type="radio" name="city" value="busan">부산
+		<input type="radio" name="city" value="chunchen">춘천
+		
+		<input type="button" value="찾기" onclick="findChecked()">
+	</form>
+	
+</body>
+</html>

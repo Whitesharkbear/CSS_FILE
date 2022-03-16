@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+	function cal() {
+		var exp = document.getElementById('exp');
+		var result = document.getElementById('result');
+		result.value = eval(exp.value);
+	}
+	
+	function wheel() {
+		
+		var img = document.getElementById('img');
+		img.onwheel = function(e) {
+			if(e.wheelDelta > 0){
+				img.style.width = '200px';
+				img.style.height = '200px';
+				alert(e.wheelDelta);
+				
+			} else{
+				img.style.width = '100px';
+				img.style.height = '100px';
+				alert(e.wheelDelta);
+			}
+		}
+	}
+
+</script>
+
+</head>
+<body>
+
+	<h3>onclick, 계산기</h3>
+	<hr>
+	계산하고자 하는 수식을 입력하고 계산 버튼을 눌러주세요.
+	<br><br>
+	<form>
+		식<input type="text" id="exp" value=""><br>
+		값<input type="text" id='result'>
+		<input type="button" value="계산" onclick="cal()">	
+	</form>
+	<br>
+	<img id="img" src="images/siga.jpg" width="100" height="100" onwheel="wheel()">
+
+</body>
+</html>

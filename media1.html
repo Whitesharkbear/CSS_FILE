@@ -1,0 +1,107 @@
+<!-- 
+
+	. 멀티미디어의 등장
+		- 기기의 크기가 다양해짐에 따라 대응차원의 디자인 구현 기술 >> 반응형 웹
+		- 구글이 '스마트폰 대응' 레이블 붙여주기 시작
+		
+	. 디자인 고려사항
+		- 손가락으로 조작하는 것을 의식하여 디자인해야한다.
+			세세한 문자링크를 만들지 않는다.
+			작은 링크 영역을 만들지 마라.
+		- 누를 수 있다는 것을 알도록 디자인해라.
+			터치스크린에서는 '롤오버 개념이 없다'
+		- (모바일)디자인의 기본은 가로폭 가변
+			유동형 레이아웃 : 화면은 고정인데, 콘텐츠는 가변
+			반응형 레이아웃 : 화면크기나 콘텐츠나 모두 가변
+			디바이스의 화면크기와 맞춘 레이아웃으로 해라.
+			링크영역 : 최소 44*44 px이상은 되어야한다.
+			글자크기 : 11 point 이상은 되게하라.
+			
+	. 화면크기와 레이아웃
+		- viewport?
+			모바일 단말기에서 디바이스의 스크린 크기를 몇 픽셀 * 몇 픽셀로 할 것인지를 설정하는 것.
+			'가상 윈도우'라고 할 수 있다.
+				
+					(PC)			가상윈도우				스마트폰(320px * 360px)
+					웹화면	-----	viewport:980px	---	화면이 축소된다. 가독성이 현저히 떨어짐.
+									viewport:width 320px
+		- 적용방법
+			
+					<meta name="viewport" content="width=320px">
+					<meta name="viewport" content="width=device-width">
+			
+	. 미디어쿼리 : @media
+		- HTML5 문서에 다양한 장치별로 각기 다른 스타일을 적용하는 규칙이다.
+	
+				media유형				의   미
+				-------------------------
+				all					모든장치
+				screen				컴퓨터,태블릿,모바일
+				print				인쇄장치(출력)
+				handheld			휴대용기기	PDA
+				TV					텔레비젼 디스플레이
+				projection	
+				
+		- 적용방법
+		
+					@media [only 또는 not] 미디어타입 [and (조건)][and (조건)]...{CSS설정}		
+						   [only 또는 not] 미디어타입 [and (조건)][and (조건)]...{CSS설정}	
+						   
+						   . only :  조건만족
+						   . not : 조건만족하지 않는것
+						   . 조건 : 미디어의 크기
+						   
+					미디어 특성
+							특성				조건			최대/최소값				값
+							----------------------------------------------
+							width			출력의가로폭	max-/min-			수치
+							height			출력의세로폭	max-/min-			수치
+							device-width	스크린가로폭	max-/min-			수치
+							device-height	스크린세로폭	max-/min-			수치
+							
+							orientation		출력방향		없음					portrait(세로) 
+																			landscape(가로)
+						   
+		- 적용위치
+					<link rel = 'stylesheet' href='스타일.CSS' media='only print'>
+					<style> @media [only 또는 not] 미디어타입 [and (조건)][and (조건)]...{CSS설정} </style>
+
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<link rel="stylesheet" href="#" media='only print'>
+<style type="text/css">
+	
+	/* 320px이하에서의 스타일 */
+	@media only screen and (max-width:320px){
+	
+		*{background: Limegreen; color: white;}
+	}
+	
+	/* 321px 이상에서의 스타일이고 세로모드일 때 */
+	@media only screen and (min-width:321px) and (orientation:portrait){
+	
+		*{background: Lightyellow; color: black;}
+	}
+	
+	/* 321px 이상이고 가로모드일 때 */
+	@media only screen and (min-width:321px) and (orientation:landscape){
+	
+		*{background: purple; color: white;}
+	}
+	
+	h1{font-size: 48px; text-align: center;}
+	h2{font-size: 24px; text-align: center;}
+	
+</style>
+</head>
+<body>
+
+	<h1>월요일입니다.</h1>
+	<h2>미디어쿼리학습</h2>
+	
+</body>
+</html>

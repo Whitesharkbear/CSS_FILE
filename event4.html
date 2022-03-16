@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+	function init() {
+		var p1 = document.getElementById("p1");
+		
+		p1.onmouseover = function() {
+			p1.style.backgroundColor='orchid';
+		}
+		p1.onmouseout = function() {
+			p1.style.backgroundColor='white';
+		}
+		
+		var p2 = document.getElementById("p2");
+		p2.addEventListener('click', bigsize);
+		
+		var btn = document.getElementById("b");
+		btn.onclick = function() {
+			p2.style.fontSize="1em";
+			p2.style.backgroundColor="yellow";
+			p2.removeEventListener('click', bigsize);
+		}
+		
+	}
+	
+	function bigsize() {
+		p2.style.fontSize="3em";
+	}
+
+</script>
+
+</head>
+<body onload="init()">
+	
+	<h3>익명함수로 이벤트리스너등록</h3>
+	<hr>
+	<p id="p1">마우스를 올리면 오렌지색으로 변합니다.</p>
+	<p id="p2">마우스를 클릭하면 글자크기가 변합니다.</p>
+	<hr>
+	<button id="b" type="button">이벤트 제거</button>
+	
+</body>
+</html>

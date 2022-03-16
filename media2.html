@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+
+	body,hr {
+		margin: 0;
+		padding: 0;
+		border: 0;
+	}
+	
+	div {
+		width: 1600px;
+		height: 800px;
+		margin: 0 auto;
+	}
+	
+	@media screen and (max-width: 640px){
+		div{background-color: red}
+	}
+	@media screen and (min-width: 641px) and (max-width: 980px){
+		div{background-color: green}
+	}
+	@media screen and (min-width: 981px){
+		div{background-color: blue}
+	}
+	
+	ul{
+		display: table;
+		width: 800px;
+		margin: 0 auto;
+		padding: 0;
+		
+	}
+	
+	li{
+		background-color: #78C888;
+		font: 18px "굴림",Gulim white;
+		font-weight: bolder;
+		list-style: none;
+		
+		display: table-cell;
+		vertical-align: middle;
+		width: 30px;
+		height: 100px;
+		text-align: center;
+		border: 1px solid white;
+	}
+	
+</style>
+</head>
+<body>
+	<h2>미디어 쿼리를 활용한 브라우저 화면크기에 따른 스타일 적용</h2>
+	<hr>
+	<div>
+		<ul>
+			<li><A href="#">회사소개</A></li>
+			<li><A href="#">인사말</A></li>
+			<li><A href="#">제품소개</A></li>
+			<li><A href="#">배송지역</A></li>
+		</ul>
+	</div>
+</body>
+</html>

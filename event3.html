@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	
+	var p;
+	
+	function init() {
+		p = document.getElementById("p");
+		
+		p.addEventListener("mouseover", over);
+		p.addEventListener("mouseover", size);
+		p.addEventListener("mouseover", fontstyle);
+		p.addEventListener("mouseout", out);
+	}
+	
+	function over() {
+		p.style.backgroundColor="orchid";
+	}
+	
+	function size() {
+		p.style.fontSize="30px";
+	}
+	
+	function fontstyle() {
+		p.style.fontStyle="italic";
+	}
+	
+	function out() {
+		p.style.backgroundColor="white";
+	}
+	
+	function remove() {
+		p.removeEventListener("mouseover",over);
+	}
+
+</script>
+
+</head>
+<body onload="init()">
+	
+	<h3>addEventListener()활용 리스너등록</h3>
+	<hr>
+	<button type="button" id="r" onclick="remove()">이벤트제거</button>
+	<hr>
+	<p id="p">마우스를 올리면 배경색을 변경합니다. 글자사이즈나 스타일도 변경됩니다.</p>
+	
+</body>
+</html>

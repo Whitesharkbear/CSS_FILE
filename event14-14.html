@@ -1,0 +1,44 @@
+
+
+<!-- 
+	
+	폼 요소
+		. 키 관련 이벤트
+		. 포커스 관련 이벤트
+		. change관련 이벤트
+	
+	onfocus
+	onblur
+
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+	function checkname(obj) {
+		if(obj.value == ""){
+			alert("이름을 입력해 주셔야 합니다. 다시!");
+			obj.focus();
+		}
+	}
+
+</script>
+
+</head>
+<body onload="document.getElementById('name').focus()">
+
+	<h3>포커스 이벤트</h3>
+	<hr>
+	<p>이름을 입력하지 않고는 다른 창으로 이동할 수 없습니다.</p>
+	<form action="">
+		이름<input type="text" id="name" onblur="checkname(this)"><br>
+		학번<input type="text">
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<p>이것은<span>문장</span>입니다.</p>
+	<form>
+		<input type="text" name="s">
+		<input type="button" value="테스트" id="input">
+		<hr>
+	</form>
+	<div id="div" style="color: red"></div>
+	
+	<script type="text/javascript">
+	
+		var div = document.getElementById("div");
+		var input = document.getElementById("input");
+		
+		document.body.addEventListener('click',capture,true);	/* body(c) */
+		input.addEventListener('click',bubble,false);			/* input(b) */
+		document.body.addEventListener('click',bubble,false);	/* body(c) */
+		
+		function capture(e) {
+			var obj = e.currentTarget;
+			var tagName = obj.tagName;
+			div.innerHTML += "<br><capture단계: "+tagName+"태그, "+e.type+"이벤트";
+		}
+		
+		function bubble(e) {
+			var obj = e.currentTarget;
+			var tagName = obj.tagName;
+			div.innerHTML += "<br><bubble단계: "+tagName+"태그, "+e.type+"이벤트";
+		}
+	
+	</script>
+
+</body>
+</html>
